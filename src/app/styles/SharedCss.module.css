@@ -1,0 +1,27 @@
+.statusDrafted {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(247, 144, 9, 0.12);
+  color: rgb(181, 71, 8);
+  border-radius: 10px;
+  padding: 4px 8px;
+  min-width: 4rem;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.statusPublished {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: rgb(11, 129, 90);
+  border-radius: 10px;
+  padding: 4px 8px;
+  width: 4rem;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.blinkingInfinite {
+  animation: fading 2s infinite ease-in;
+}

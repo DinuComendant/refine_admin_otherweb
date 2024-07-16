@@ -1,0 +1,49 @@
+Talk to Mangir how to motivate my ROI
+Expectations in 6 months
+Ask Mangir how to present to a non-technical guy my value in the company from technical standpoint
+Present the product for an investor
+Interview with Angela and Dima
+Make a 2000-3000 word presentation
+Make him feel that you don't take money from him
+
+Presentation structure:
+
+1. General overview of the product
+   -Self introduction
+   -Problem statement(showing the previous state of the admin panel)
+   -Solution(a clear statement of the issues in the previous admin panel)
+2. UX case (talk about the feedback and milestones)
+3. Jump from the presentation of the admin panel to your future goals/milestones
+
+TO DO:
+
+1. Fix delete button for brief list
+2. Show which link is active from side bar - DONE
+3. FIx modal in brief
+4. Disable button remove block during published - DONE
+5. Fix toolbar buttons to stick
+6. Delete ID - NOT necessary anymore
+7. Make less space for author - DONE
+8. Set otherweb logo same height - DONE
+9. Fix cancel button in hostnames - DONE
+10. Make link with latest brief from home - DONE
+
+TASKS 10.04.2024
+
+1. Make the toolbar with Preview, Publish sticky - DONE
+2. Make a standard modal for Yes/No message - DONE
+3. Contact Dima Krieger - DONE
+4. Make a roadmap how to present the admin panel
+5. Fix active buttons in sidebar - DONE
+
+TASKS 11.04.2024
+
+1. Make a roadmap how to present the admin panel
+2. Sync with Dima Krieger
+
+TASKS 12.04.2024
+
+1. Sync with Sasha
+2. Prepare for mock interview with Marta
+3. Review the admin
+4. Fix snackbar

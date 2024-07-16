@@ -1,0 +1,443 @@
+// <Stack key={block.id} spacing={2}>
+                          //   {fields.indexOf(block) == blockIndex && (
+                          //     <ConfirmationModal
+                          //       onClick={handleModalClose}
+                          //       onClose={handleModalClose}
+                          //       onOpen={openModal}
+                          //       onSubmit={() => {
+                          //         console.log("delete block" + ` ${k}`);
+                          //         remove(blockIndex);
+                          //         setOpenSnackBarDelete(true);
+                          //       }}
+                          //     />
+                          //   )}
+                          //   <Stack spacing={2} className={styles.textFields}>
+                          //     <Divider
+                          //       sx={{ margin: "2rem" }}
+                          //       variant="middle"
+                          //     />
+                          //     <Typography variant="h5">
+                          //       {block.type === "news"
+                          //         ? "Article block"
+                          //         : "Image block"}
+                          //     </Typography>
+                          //     <Stack direction="row" spacing={2}>
+                          //       <FilledButton
+                          //         typeOf={
+                          //           isPublished ? "up-out-disabled" : "up-out"
+                          //         }
+                          //         onClick={() => {
+                          //           move(k, k - 1);
+                          //         }}
+                          //       >
+                          //         Move block up
+                          //       </FilledButton>
+                          //       <FilledButton
+                          //         typeOf={
+                          //           isPublished
+                          //             ? "error-down-out-disabled"
+                          //             : "error-down-out"
+                          //         }
+                          //         onClick={() => {
+                          //           move(k, k + 1);
+                          //         }}
+                          //       >
+                          //         Move block down
+                          //       </FilledButton>
+                          //     </Stack>
+                          //     <Stack>
+                          //       <Stack
+                          //         direction="row"
+                          //         spacing={2}
+                          //         justifyContent="space-between"
+                          //       >
+                          //         <SelectComponent
+                          //           state={defaultData.state}
+                          //           id="article-block"
+                          //           label="Type"
+                          //           menuValueObj={menuItemsType}
+                          //           indexBlock={k}
+                          //           property="type"
+                          //           defaultValue={block.type || null}
+                          //         />
+
+                          //         <Stack>
+                          //           <FilledButton
+                          //             typeOf={
+                          //               defaultData.state == "published"
+                          //                 ? "disabled-delete"
+                          //                 : "delete"
+                          //             }
+                          //             onClick={() => {
+                          //               handleModalOpen();
+                          //               console.log(k);
+                          //               setBlockIndex(k);
+                          //             }}
+                          //           >
+                          //             Remove block
+                          //           </FilledButton>
+                          //         </Stack>
+                          //       </Stack>
+                          //       {errors.blocks?.type && (
+                          //         <Typography>
+                          //           {errors.blocks.message}
+                          //         </Typography>
+                          //       )}
+                          //     </Stack>
+
+                          //     {isToggled && (
+                          //       <YesNoMessage
+                          //         message="Are you sure you want to delete the block?"
+                          //         yesClick={() => {
+                          //           remove(k);
+                          //           setIsToggled(false);
+                          //         }}
+                          //         noClick={() => {
+                          //           setIsToggled(false);
+                          //         }}
+                          //       />
+                          //     )}
+
+                          //     {type == "news" && (
+                          //       <Stack
+                          //         spacing={2}
+                          //         sx={{
+                          //           width: "100%",
+                          //         }}
+                          //       >
+                          //         <Stack
+                          //           direction="row"
+                          //           justifyContent="space-between"
+                          //         >
+                          //           <Stack
+                          //             className={styles.inputWidth}
+                          //             spacing={2}
+                          //           >
+                          //             <SelectComponent
+                          //               state={defaultData.state}
+                          //               id="label"
+                          //               label="Article label"
+                          //               menuValueArray={articleLabels}
+                          //               indexBlock={k}
+                          //               property="label"
+                          //               defaultValue={
+                          //                 (block.type == "news" &&
+                          //                   block.label) ||
+                          //                 null
+                          //               }
+                          //             />
+                          //             {/* <FormControl>
+                          //               <InputLabel
+                          //                 size="small"
+                          //                 id="select-label"
+                          //                 required
+                          //               >
+                          //                 Article label
+                          //               </InputLabel>
+                          //               <Select
+                          //                 size="small"
+                          //                 labelId="select-label"
+                          //                 id="select"
+                          //                 label="Article label"
+                          //                 {...methods.register(
+                          //                   `blocks.${k}.label`
+                          //                 )}
+                          //                 defaultValue={
+                          //                   (block.type == "news" &&
+                          //                     block.label) ||
+                          //                   null
+                          //                 }
+                          //                 disabled={
+                          //                   defaultData.state == "published"
+                          //                 }
+                          //               >
+                          //                 {block.type == "news" &&
+                          //                   articleLabels.map(
+                          //                     (label, index) => (
+                          //                       <MenuItem
+                          //                         key={index}
+                          //                         value={label}
+                          //                       >
+                          //                         {label}
+                          //                       </MenuItem>
+                          //                     )
+                          //                   )}
+                          //               </Select>
+                          //             </FormControl> */}
+                          //             <ErrorMessage
+                          //               firstIndex={k}
+                          //               firstProperty="label"
+                          //               secondProperty={null}
+                          //               secondIndex={null}
+                          //             />
+                          //           </Stack>
+                          //           <TextFieldComponent
+                          //             label="Article"
+                          //             blockIndex={k}
+                          //             properties={formValues}
+                          //             nestedIndex={null}
+                          //             style={true}
+                          //           />
+                          //         </Stack>
+                          //         <TextField
+                          //           size="small"
+                          //           label="Article title"
+                          //           required
+                          //           {...methods.register(`blocks.${k}.title`)}
+                          //         />
+                          //         <ErrorMessage
+                          //           firstIndex={k}
+                          //           firstProperty="title"
+                          //           secondProperty={null}
+                          //           secondIndex={null}
+                          //         />
+
+                          //         <TextField
+                          //           size="small"
+                          //           label="Article description"
+                          //           {...methods.register(
+                          //             `blocks.${k}.description`
+                          //           )}
+                          //         />
+
+                          //         <Controller
+                          //           name={`blocks.${k}.content`}
+                          //           control={methods.control}
+                          //           render={({ field }) => (
+                          //             <SimpleMDE
+                          //               spellCheck="false"
+                          //               placeholder="Write the article"
+                          //               {...field}
+                          //             />
+                          //           )}
+                          //         />
+                          //         <ErrorMessage
+                          //           firstIndex={k}
+                          //           firstProperty="content"
+                          //           secondProperty={null}
+                          //           secondIndex={null}
+                          //         />
+
+                          //         <FormControl>
+                          //           <InputLabel
+                          //             size="small"
+                          //             id={`demo-simple-select-label-stories`}
+                          //             required
+                          //           >
+                          //             Stories
+                          //           </InputLabel>
+                          //           <Select
+                          //             size="small"
+                          //             labelId={`demo-simple-select-label-stories`}
+                          //             id={`demo-simple-select-stories`}
+                          //             label="Stories"
+                          //             sx={{ minWidth: "16rem" }}
+                          //             defaultValue={
+                          //               defaultData.blocks[k].stories !== null
+                          //                 ? "stories"
+                          //                 : "bubbling_under"
+                          //             }
+                          //             disabled={
+                          //               defaultData.state == "published"
+                          //             }
+                          //           >
+                          //             <MenuItem value={"stories"}>
+                          //               Running Stories
+                          //             </MenuItem>
+                          //             <MenuItem value={"bubbling_under"}>
+                          //               Bubbling Under
+                          //             </MenuItem>
+                          //           </Select>
+                          //         </FormControl>
+
+                          //         <ArticleArray
+                          //           storyType={storiesType}
+                          //           nestIndex={k}
+                          //           defaultData={defaultData}
+                          //         />
+                          //       </Stack>
+                          //     )}
+                          //     {type == "image" && (
+                          //       <Stack>
+                          //         <TextField
+                          //           size="small"
+                          //           label="Article image"
+                          //           required
+                          //           {...methods.register(`blocks.${k}.image`)}
+                          //         />
+                          //         {/* TODO: Check if data validation for image works properly */}
+                          //         <ErrorMessage
+                          //           firstIndex={k}
+                          //           firstProperty="image"
+                          //           secondProperty={null}
+                          //           secondIndex={null}
+                          //         />
+                          //       </Stack>
+                          //     )}
+                          //   </Stack>
+
+                          //   <ConfirmationModal
+                          //     onClick={handleClose}
+                          //     onClose={handleClose}
+                          //     onOpen={open}
+                          //     // onOpen={false}
+                          //     onSubmit={() => remove(k)}
+                          //   />
+                          // </Stack>
+
+
+
+
+                          <Stack
+                      spacing={2}
+                      sx={{
+                        padding: "2rem 0",
+                      }}
+                      className={styles.textFields}
+                    >
+                      {/* TO DO:  Change summary prop to description */}
+                      {/* TO DO: Create a component for TextField */}
+                      {defaultData.state === "published" && (
+                        <Alert severity="error">
+                          Warning! Published forms are READ-ONLY. To be able to
+                          change it, click the button <em>Move to Draft</em>
+                        </Alert>
+                      )}
+                      {/* <TextFieldComponent
+                      direction={"column"}
+                      required={true}
+                      data={["title", "slug", "description"]}
+                    /> */}
+                      {editPage ? (
+                        <TextField
+                          required
+                          label="Brief title"
+                          size="small"
+                          {...methods.register("title")}
+                        />
+                      ) : (
+                        <TextField
+                          required
+                          label="Brief title"
+                          size="small"
+                          {...methods.register("title", {
+                            onChange(event) {
+                              console.log(event.target.value);
+
+                              methods.setValue(
+                                "slug",
+                                slugify(event.target.value, {
+                                  lower: true,
+                                  remove: /[*+~.()'"!:@,;^%&#=`{}?<>]/g,
+                                })
+                              );
+                            },
+                          })}
+                        />
+                      )}
+
+                      {errors.title && (
+                        <Alert severity="error">{errors.title.message} </Alert>
+                      )}
+
+                      <TextField
+                        required
+                        label="Description"
+                        multiline
+                        rows={3}
+                        size="small"
+                        {...methods.register("description")}
+                      ></TextField>
+                      {errors.description && (
+                        <Alert severity="error">
+                          {" "}
+                          {errors.description.message}{" "}
+                        </Alert>
+                      )}
+                      <TextField
+                        required
+                        label="Slug"
+                        size="small"
+                        {...methods.register("slug")}
+                      ></TextField>
+                      {errors.slug && (
+                        <Alert severity="error"> {errors.slug.message} </Alert>
+                      )}
+                      <Stack direction="row" justifyContent="space-between">
+                        <TextField
+                          label="Date"
+                          size="small"
+                          required
+                          {...methods.register("date")}
+                          type="date"
+                          className={styles.inputWidth}
+                        ></TextField>
+                        {errors.date && (
+                          <Alert severity="error">{errors.date.message}</Alert>
+                        )}
+                        <Stack className={styles.inputWidth} spacing={2}>
+                          <Stack
+                            direction="row"
+                            spacing={2}
+                            alignItems="center"
+                          >
+                            <Avatar
+                              src={
+                                session.user.username == "admin"
+                                  ? hardCodedAvatar
+                                  : authorAvatar
+                              }
+                            />
+                            {session?.user.username == "admin" ? (
+                              <FormControl sx={{ minWidth: "8rem" }}>
+                                <InputLabel
+                                  size="small"
+                                  id="author-select"
+                                  required
+                                >
+                                  Author
+                                </InputLabel>
+                                <Select
+                                  size="small"
+                                  labelId="author-select"
+                                  id="author-simple-select"
+                                  label="Author"
+                                  {...methods.register(`author.name`)}
+                                  disabled={defaultData.state == "published"}
+                                  defaultValue={
+                                    defaultData.author.name ||
+                                    session.user.name ||
+                                    null
+                                  }
+                                >
+                                  {/* TO DO: Remove hardcoding the authors */}
+                                  {userList.map((user: AdminUser) => (
+                                    <MenuItem
+                                      key={user.id}
+                                      value={user.name || undefined}
+                                    >
+                                      {user.name}
+                                    </MenuItem>
+                                  ))}
+                                </Select>
+                              </FormControl>
+                            ) : (
+                              <TextField
+                                size="small"
+                                label="Author"
+                                required
+                                // TO DO: Replace admin permissions
+                                disabled={!session?.user.name.includes("admin")}
+                                {...methods.register(`author.name`)}
+                              />
+                            )}
+                          </Stack>
+                          {errors.author?.name && (
+                            <Alert severity="error">
+                              {" "}
+                              {errors.author?.name.message}{" "}
+                            </Alert>
+                          )}
+                        </Stack>
+                      </Stack>
+                    </Stack>

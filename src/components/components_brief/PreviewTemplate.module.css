@@ -1,0 +1,23 @@
+.largeText {
+  display: block;
+}
+
+.bodyPreview img {
+  width: 25rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.briefBlock {
+  overflow-y: scroll;
+  width: 45rem;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 15px;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 1000px) {
+  .briefBlock {
+    height: 40rem;
+  }
+}
